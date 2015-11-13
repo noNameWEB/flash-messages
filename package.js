@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'mrt:flash-messages',
-  summary: 'A package to display flash messages to the user',
-  version: '1.0.1',
-  git: 'https://github.com/camilosw/flash-messages.git'
+  name: 'nonameweb:flash-messages-semantic-ui',
+  summary: 'A package to display flash messages to the user for the Semantic-UI.',
+  version: '0.9.0',
+  git: 'https://github.com/noNameWEB/flash-messages-semantic-ui.git'
 });
 
 Package.onUse(function(api) {
