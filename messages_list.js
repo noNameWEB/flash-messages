@@ -22,9 +22,9 @@ Template.flashMessageItem.rendered = function() {
         });
     });
     if (message.options && message.options.autoHide) {
-        var $alert = $(this.find('.alert'));
+        var $message = $(this.find('.message'));
         Meteor.setTimeout(function() {
-                $alert.fadeOut(400, function() {
+                $message.fadeOut(400, function() {
                     flashMessages.remove({
                         _id: message._id
                     });
