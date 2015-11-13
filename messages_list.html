@@ -1,20 +1,26 @@
 <template name="flashMessages">
-  {{#each messages}} 
-    {{> flashMessageItem}}
-  {{/each}}
+    {{#each messages}} {{> flashMessageItem}} {{/each}}
 </template>
 
 <template name="flashMessageItem">
-  <div class="alert {{style}} alert-dismissable" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    {{# if group }}
-      <ul>
-        {{#each message}}
-          <li>{{{this}}}</li>
-        {{/each}}
-      </ul>
-    {{ else }}
-      {{{message}}}
-    {{/ if }}
-  </div> 
+    <div class="ui {{style}} message">
+        <i class="close icon"></i>
+        <div class="header">
+            {{{title}}}
+        </div>
+
+        {{# if group }}
+            <ul class="list">
+            {{#each message}}
+                <li>{{{this}}}</li>
+            {{/each}}
+            </ul>
+        {{ else }}
+            <p>
+                {{{message}}}
+            </p>
+        {{/ if }}
+    </div>
+
+
 </template>
