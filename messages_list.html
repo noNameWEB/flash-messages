@@ -4,10 +4,12 @@
 
 <template name="flashMessageItem">
     <div class="ui {{style}} message">
+        {{# if title}}
         <i class="close icon"></i>
         <div class="header">
             {{{title}}}
         </div>
+        {{/ if }}
 
         {{# if group }}
             <ul class="list">
