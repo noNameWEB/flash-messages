@@ -8,16 +8,16 @@ flashMessages = new Mongo.Collection(null);
 
 FlashMessages = {
     sendWarning: function(message, title, options) {
-        sendMessage(message, title, 'alert-warning', options);
+        sendMessage(message, title, 'warning', options);
     },
-    sendError: function(message, title, options) {
-        sendMessage(message, title, 'alert-error alert-danger', options);
+    sendNegative: function(message, title, options) {
+        sendMessage(message, title, 'negative alert-danger', options);
     },
-    sendSuccess: function(message, title, options) {
-        sendMessage(message, title, 'alert-success', options);
+    sendPositive: function(message, title, options) {
+        sendMessage(message, title, 'positive', options);
     },
     sendInfo: function(message, title, options) {
-        sendMessage(message, title, 'alert-info', options);
+        sendMessage(message, title, 'info', options);
     },
     clear: function() {
         flashMessages.remove({
